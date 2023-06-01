@@ -1,0 +1,44 @@
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\appsettings.json
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR API.exe
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR API.deps.json
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR API.runtimeconfig.json
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR API.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\ref\NQR API.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR API.pdb
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.AssemblyInfo.cs
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\scopedcss\bundle\NQR API.styles.css
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.csproj.CopyComplete
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.dll
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\ref\NQR API.dll
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.pdb
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.genruntimeconfig.cache
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR.Application.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR.Common.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR.Model.dll
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR.Application.pdb
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR.Common.pdb
+C:\Users\hp\source\repos\NQR API\NQR API\bin\Debug\net6.0\NQR.Model.pdb
+C:\Users\hp\source\repos\NQR API\NQR API\obj\Debug\net6.0\NQR API.MvcApplicationPartsAssemblyInfo.cs

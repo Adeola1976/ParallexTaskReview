@@ -1,0 +1,2423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/arm/ceto/" xmlns:s1="urn:microsoft-dynamics-nav/xmlports/x50101" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="urn:microsoft-dynamics-nav/xmlports/x50105" xmlns:s3="urn:microsoft-dynamics-nav/xmlports/x50106" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/arm/ceto/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/arm/ceto/">
+      <s:import namespace="urn:microsoft-dynamics-nav/xmlports/x50101" />
+      <s:import namespace="urn:microsoft-dynamics-nav/xmlports/x50105" />
+      <s:import namespace="urn:microsoft-dynamics-nav/xmlports/x50106" />
+      <s:element name="RedemptionSendPortfolio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fundCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fundName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eaAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registrarAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="investorName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="redeemUnit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pdfImages" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pdfName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RedemptionSendPortfolioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RedemptionSendPortfolioResult" type="tns:RedemptionSendPortfolioResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RedemptionSendPortfolioResModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IsSuccesful" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlIdResponse" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RedemptionPortfolioStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="controlId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RedemptionPortfolioStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RedemptionPortfolioStatusResult" type="tns:RedemptionPortfolioStatusResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RedemptionPortfolioStatusResModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SignatureStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalComments" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubscriptionSendPortfolio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fundCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fundName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eaAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="surname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otherName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="controlId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phones" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dividendMandate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nuban" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numberOfUnits" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pdfImage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubscriptionSendPortfolioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubscriptionSendPortfolioResult" type="tns:SubscriptionSendPortfolioResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SubscriptionSendPortfolioResModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IsSuccesful" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ControlIdResponse" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubscriptionPortfolioStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="controlId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubscriptionPortfolioStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubscriptionPortfolioStatusResult" type="tns:SubscriptionPortfolioStatusResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SubscriptionPortfolioStatusResModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CertNum" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RegistrarAcctNo" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateDirectDebitMandate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="accountName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payerAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="narration" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="frequency" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subscriberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileExtension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileBase64Encodedstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDirectDebitMandateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateDirectDebitMandateResult" type="tns:DirectDebitMandateResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DirectDebitMandateResModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PostOCFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="settlementDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="units" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="settlementBankAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="narration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="portfolioCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostOCFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostOCFileResult" type="tns:DeluxeOCResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeluxeOCResModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PostLiquidatingInterest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mmfPortfolioCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankAccountNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="narration" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostLiquidatingInterestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostLiquidatingInterestResult" type="tns:DeluxeLiquidatingInterestResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeluxeLiquidatingInterestResModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PostLiquidatingChargesOnInterest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mmfPortfolioCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankAccountNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="narration" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostLiquidatingChargesOnInterestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostLiquidatingChargesOnInterestResult" type="tns:DeluxeLiquidatingChargesResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeluxeLiquidatingChargesResModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ProcessDisbursedLoanAndRepayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="portfolioCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productSymbol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankAccountNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="narration" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessDisbursedLoanAndRepaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessDisbursedLoanAndRepaymentResult" type="tns:DisbursedLoanResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DisbursedLoanResModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendCurrentLoanValuation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="portfolioCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="classCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productSymbol" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valueDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankAccountNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="narration" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCurrentLoanValuationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendCurrentLoanValuationResult" type="tns:DisbursedLoanResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendNomineeClientDividend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="portfolioCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securityCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="instrumentId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="declaredDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dps" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="holdingUnits" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="fxRate" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="taxRate" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendNomineeClientDividendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendNomineeClientDividendResult" type="tns:NomineeDividendResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NomineeDividendResModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNomineeDividend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNomineeDividendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNomineeDividendResult" type="s1:NomineeDividend" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMutualFundDividendPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMutualFundDividendPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMutualFundDividendPaymentResult" type="s2:DividendPayment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPostedRedemption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startdate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="enddate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPostedRedemptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPostedRedemptionResult" type="s3:REDResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDirectDebitMandate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mandateCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payerAddress" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="workFlowStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDirectDebitMandateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDirectDebitMandateResult" type="tns:UpdateDirectDebitMandateResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateDirectDebitMandateResModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DirectDebitMandateStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mandateCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DirectDebitMandateStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DirectDebitMandateStatusResult" type="tns:DirectDebitMandateStatusResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DirectDebitMandateStatusResModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MandateCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bvn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Narration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubscriberCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Frequency" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Kyc" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillerId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillerAccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillerAccountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillerBankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillerBankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkFlowStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WorkFlowStatusDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="returnbase64ofUri">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uri" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="returnbase64ofUriResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="returnbase64ofUriResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="directUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TreasuryDocUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="directUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TreasuryDocUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TreasuryDocUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TreasuryFolderDocUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="directUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TreasuryFolderDocUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TreasuryFolderDocUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundAccountFolderDocUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="directUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FundAccountFolderDocUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FundAccountFolderDocUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TreasuryLoanDocUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="directUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TreasuryLoanDocUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TreasuryLoanDocUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFromSharePointOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFromSharePointOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadFromSharePointOnlineResult" type="tns:DownloadFromSharePointOnlineResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DownloadFromSharePointOnlineResModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Base64" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendRedemptionStatusToDeluxe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="referenceno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="units" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalunits" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="transcharge" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendRedemptionStatusToDeluxeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendRedemptionStatusToDeluxeResult" type="tns:PostRedemptionStatusResModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PostRedemptionStatusResModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RedemptionSendPortfolioResModel" nillable="true" type="tns:RedemptionSendPortfolioResModel" />
+      <s:element name="RedemptionPortfolioStatusResModel" nillable="true" type="tns:RedemptionPortfolioStatusResModel" />
+      <s:element name="SubscriptionSendPortfolioResModel" nillable="true" type="tns:SubscriptionSendPortfolioResModel" />
+      <s:element name="SubscriptionPortfolioStatusResModel" nillable="true" type="tns:SubscriptionPortfolioStatusResModel" />
+      <s:element name="DirectDebitMandateResModel" nillable="true" type="tns:DirectDebitMandateResModel" />
+      <s:element name="DeluxeOCResModel" nillable="true" type="tns:DeluxeOCResModel" />
+      <s:element name="DeluxeLiquidatingInterestResModel" nillable="true" type="tns:DeluxeLiquidatingInterestResModel" />
+      <s:element name="DeluxeLiquidatingChargesResModel" nillable="true" type="tns:DeluxeLiquidatingChargesResModel" />
+      <s:element name="DisbursedLoanResModel" nillable="true" type="tns:DisbursedLoanResModel" />
+      <s:element name="NomineeDividendResModel" nillable="true" type="tns:NomineeDividendResModel" />
+      <s:element name="NomineeDividend" nillable="true" type="s1:NomineeDividend" />
+      <s:element name="DividendPayment" nillable="true" type="s2:DividendPayment" />
+      <s:element name="REDResponse" nillable="true" type="s3:REDResponse" />
+      <s:element name="UpdateDirectDebitMandateResModel" nillable="true" type="tns:UpdateDirectDebitMandateResModel" />
+      <s:element name="DirectDebitMandateStatusResModel" nillable="true" type="tns:DirectDebitMandateStatusResModel" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DownloadFromSharePointOnlineResModel" nillable="true" type="tns:DownloadFromSharePointOnlineResModel" />
+      <s:element name="PostRedemptionStatusResModel" nillable="true" type="tns:PostRedemptionStatusResModel" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x50101">
+      <s:complexType name="NomineeDividend" mixed="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Nominee" type="s1:Nominee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Nominee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PortfolioCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MutualfundCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssetClassId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeclaredDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoldingUnits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessedDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x50105">
+      <s:complexType name="DividendPayment" mixed="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Dividend" type="s2:Dividend" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Dividend">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PortfolioCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MutualfundCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssetClassId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankAccountNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeclaredDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnitsHolding" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsReinvestment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessedDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-nav/xmlports/x50106">
+      <s:complexType name="REDResponse" mixed="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Lines" type="s3:Lines" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Lines">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="No" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FundCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoOfUnits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DividendPaid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalAmountPayable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValueDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BankSortCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankAccountNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankAccountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NetAmountPayable" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RedemptionType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RedemptionSendPortfolioSoapIn">
+    <wsdl:part name="parameters" element="tns:RedemptionSendPortfolio" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionSendPortfolioSoapOut">
+    <wsdl:part name="parameters" element="tns:RedemptionSendPortfolioResponse" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionPortfolioStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:RedemptionPortfolioStatus" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionPortfolioStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:RedemptionPortfolioStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionSendPortfolioSoapIn">
+    <wsdl:part name="parameters" element="tns:SubscriptionSendPortfolio" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionSendPortfolioSoapOut">
+    <wsdl:part name="parameters" element="tns:SubscriptionSendPortfolioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionPortfolioStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SubscriptionPortfolioStatus" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionPortfolioStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SubscriptionPortfolioStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectDebitMandateSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateDirectDebitMandate" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectDebitMandateSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateDirectDebitMandateResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostOCFileSoapIn">
+    <wsdl:part name="parameters" element="tns:PostOCFile" />
+  </wsdl:message>
+  <wsdl:message name="PostOCFileSoapOut">
+    <wsdl:part name="parameters" element="tns:PostOCFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingInterestSoapIn">
+    <wsdl:part name="parameters" element="tns:PostLiquidatingInterest" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingInterestSoapOut">
+    <wsdl:part name="parameters" element="tns:PostLiquidatingInterestResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingChargesOnInterestSoapIn">
+    <wsdl:part name="parameters" element="tns:PostLiquidatingChargesOnInterest" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingChargesOnInterestSoapOut">
+    <wsdl:part name="parameters" element="tns:PostLiquidatingChargesOnInterestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDisbursedLoanAndRepaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessDisbursedLoanAndRepayment" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDisbursedLoanAndRepaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessDisbursedLoanAndRepaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendCurrentLoanValuationSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCurrentLoanValuation" />
+  </wsdl:message>
+  <wsdl:message name="SendCurrentLoanValuationSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCurrentLoanValuationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendNomineeClientDividendSoapIn">
+    <wsdl:part name="parameters" element="tns:SendNomineeClientDividend" />
+  </wsdl:message>
+  <wsdl:message name="SendNomineeClientDividendSoapOut">
+    <wsdl:part name="parameters" element="tns:SendNomineeClientDividendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNomineeDividendSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNomineeDividend" />
+  </wsdl:message>
+  <wsdl:message name="GetNomineeDividendSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNomineeDividendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMutualFundDividendPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMutualFundDividendPayment" />
+  </wsdl:message>
+  <wsdl:message name="GetMutualFundDividendPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMutualFundDividendPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPostedRedemptionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPostedRedemption" />
+  </wsdl:message>
+  <wsdl:message name="GetPostedRedemptionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPostedRedemptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDirectDebitMandateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDirectDebitMandate" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDirectDebitMandateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDirectDebitMandateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DirectDebitMandateStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:DirectDebitMandateStatus" />
+  </wsdl:message>
+  <wsdl:message name="DirectDebitMandateStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:DirectDebitMandateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="returnbase64ofUriSoapIn">
+    <wsdl:part name="parameters" element="tns:returnbase64ofUri" />
+  </wsdl:message>
+  <wsdl:message name="returnbase64ofUriSoapOut">
+    <wsdl:part name="parameters" element="tns:returnbase64ofUriResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:DocUpload" />
+  </wsdl:message>
+  <wsdl:message name="DocUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:DocUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryDocUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:TreasuryDocUpload" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryDocUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:TreasuryDocUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryFolderDocUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:TreasuryFolderDocUpload" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryFolderDocUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:TreasuryFolderDocUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="FundAccountFolderDocUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:FundAccountFolderDocUpload" />
+  </wsdl:message>
+  <wsdl:message name="FundAccountFolderDocUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:FundAccountFolderDocUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryLoanDocUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:TreasuryLoanDocUpload" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryLoanDocUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:TreasuryLoanDocUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFromSharePointOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFromSharePointOnline" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFromSharePointOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFromSharePointOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendRedemptionStatusToDeluxeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendRedemptionStatusToDeluxe" />
+  </wsdl:message>
+  <wsdl:message name="SendRedemptionStatusToDeluxeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendRedemptionStatusToDeluxeResponse" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionSendPortfolioHttpGetIn">
+    <wsdl:part name="fundCode" type="s:string" />
+    <wsdl:part name="fundName" type="s:string" />
+    <wsdl:part name="eaAccountNumber" type="s:string" />
+    <wsdl:part name="registrarAccountNumber" type="s:string" />
+    <wsdl:part name="investorName" type="s:string" />
+    <wsdl:part name="redeemUnit" type="s:string" />
+    <wsdl:part name="pdfImages" type="s:string" />
+    <wsdl:part name="pdfName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionSendPortfolioHttpGetOut">
+    <wsdl:part name="Body" element="tns:RedemptionSendPortfolioResModel" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionPortfolioStatusHttpGetIn">
+    <wsdl:part name="controlId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionPortfolioStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:RedemptionPortfolioStatusResModel" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionSendPortfolioHttpGetIn">
+    <wsdl:part name="fundCode" type="s:string" />
+    <wsdl:part name="fundName" type="s:string" />
+    <wsdl:part name="eaAccountNumber" type="s:string" />
+    <wsdl:part name="surname" type="s:string" />
+    <wsdl:part name="firstName" type="s:string" />
+    <wsdl:part name="otherName" type="s:string" />
+    <wsdl:part name="controlId" type="s:string" />
+    <wsdl:part name="address1" type="s:string" />
+    <wsdl:part name="address2" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="phones" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="dividendMandate" type="s:string" />
+    <wsdl:part name="bankCode" type="s:string" />
+    <wsdl:part name="bankName" type="s:string" />
+    <wsdl:part name="nuban" type="s:string" />
+    <wsdl:part name="numberOfUnits" type="s:string" />
+    <wsdl:part name="pdfImage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionSendPortfolioHttpGetOut">
+    <wsdl:part name="Body" element="tns:SubscriptionSendPortfolioResModel" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionPortfolioStatusHttpGetIn">
+    <wsdl:part name="controlId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionPortfolioStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:SubscriptionPortfolioStatusResModel" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectDebitMandateHttpGetIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="phoneNumber" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="accountName" type="s:string" />
+    <wsdl:part name="payerName" type="s:string" />
+    <wsdl:part name="payerAddress" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+    <wsdl:part name="productId" type="s:string" />
+    <wsdl:part name="frequency" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="subscriberCode" type="s:string" />
+    <wsdl:part name="bankCode" type="s:string" />
+    <wsdl:part name="fileExtension" type="s:string" />
+    <wsdl:part name="fileBase64Encodedstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectDebitMandateHttpGetOut">
+    <wsdl:part name="Body" element="tns:DirectDebitMandateResModel" />
+  </wsdl:message>
+  <wsdl:message name="PostOCFileHttpGetIn">
+    <wsdl:part name="settlementDate" type="s:string" />
+    <wsdl:part name="units" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="settlementBankAccount" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+    <wsdl:part name="portfolioCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostOCFileHttpGetOut">
+    <wsdl:part name="Body" element="tns:DeluxeOCResModel" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingInterestHttpGetIn">
+    <wsdl:part name="mmfPortfolioCode" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingInterestHttpGetOut">
+    <wsdl:part name="Body" element="tns:DeluxeLiquidatingInterestResModel" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingChargesOnInterestHttpGetIn">
+    <wsdl:part name="mmfPortfolioCode" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingChargesOnInterestHttpGetOut">
+    <wsdl:part name="Body" element="tns:DeluxeLiquidatingChargesResModel" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDisbursedLoanAndRepaymentHttpGetIn">
+    <wsdl:part name="portfolioCode" type="s:string" />
+    <wsdl:part name="classCode" type="s:string" />
+    <wsdl:part name="productSymbol" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDisbursedLoanAndRepaymentHttpGetOut">
+    <wsdl:part name="Body" element="tns:DisbursedLoanResModel" />
+  </wsdl:message>
+  <wsdl:message name="SendCurrentLoanValuationHttpGetIn">
+    <wsdl:part name="portfolioCode" type="s:string" />
+    <wsdl:part name="classCode" type="s:string" />
+    <wsdl:part name="productSymbol" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCurrentLoanValuationHttpGetOut">
+    <wsdl:part name="Body" element="tns:DisbursedLoanResModel" />
+  </wsdl:message>
+  <wsdl:message name="SendNomineeClientDividendHttpGetIn">
+    <wsdl:part name="portfolioCode" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="currencyCode" type="s:string" />
+    <wsdl:part name="instrumentId" type="s:string" />
+    <wsdl:part name="declaredDate" type="s:string" />
+    <wsdl:part name="paymentDate" type="s:string" />
+    <wsdl:part name="dps" type="s:string" />
+    <wsdl:part name="holdingUnits" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="fxRate" type="s:string" />
+    <wsdl:part name="taxRate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendNomineeClientDividendHttpGetOut">
+    <wsdl:part name="Body" element="tns:NomineeDividendResModel" />
+  </wsdl:message>
+  <wsdl:message name="GetNomineeDividendHttpGetIn">
+    <wsdl:part name="date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNomineeDividendHttpGetOut">
+    <wsdl:part name="Body" element="tns:NomineeDividend" />
+  </wsdl:message>
+  <wsdl:message name="GetMutualFundDividendPaymentHttpGetIn">
+    <wsdl:part name="date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMutualFundDividendPaymentHttpGetOut">
+    <wsdl:part name="Body" element="tns:DividendPayment" />
+  </wsdl:message>
+  <wsdl:message name="GetPostedRedemptionHttpGetIn">
+    <wsdl:part name="startdate" type="s:string" />
+    <wsdl:part name="enddate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPostedRedemptionHttpGetOut">
+    <wsdl:part name="Body" element="tns:REDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDirectDebitMandateHttpGetIn">
+    <wsdl:part name="mandateCode" type="s:string" />
+    <wsdl:part name="phoneNumber" type="s:string" />
+    <wsdl:part name="payerName" type="s:string" />
+    <wsdl:part name="payerAddress" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="workFlowStatus" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDirectDebitMandateHttpGetOut">
+    <wsdl:part name="Body" element="tns:UpdateDirectDebitMandateResModel" />
+  </wsdl:message>
+  <wsdl:message name="DirectDebitMandateStatusHttpGetIn">
+    <wsdl:part name="mandateCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DirectDebitMandateStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:DirectDebitMandateStatusResModel" />
+  </wsdl:message>
+  <wsdl:message name="returnbase64ofUriHttpGetIn">
+    <wsdl:part name="uri" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="returnbase64ofUriHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DocUploadHttpGetIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocUploadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryDocUploadHttpGetIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryDocUploadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryFolderDocUploadHttpGetIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryFolderDocUploadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FundAccountFolderDocUploadHttpGetIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FundAccountFolderDocUploadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryLoanDocUploadHttpGetIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryLoanDocUploadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFromSharePointOnlineHttpGetIn">
+    <wsdl:part name="strPath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFromSharePointOnlineHttpGetOut">
+    <wsdl:part name="Body" element="tns:DownloadFromSharePointOnlineResModel" />
+  </wsdl:message>
+  <wsdl:message name="SendRedemptionStatusToDeluxeHttpGetIn">
+    <wsdl:part name="referenceno" type="s:string" />
+    <wsdl:part name="units" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+    <wsdl:part name="totalunits" type="s:string" />
+    <wsdl:part name="transcharge" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendRedemptionStatusToDeluxeHttpGetOut">
+    <wsdl:part name="Body" element="tns:PostRedemptionStatusResModel" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionSendPortfolioHttpPostIn">
+    <wsdl:part name="fundCode" type="s:string" />
+    <wsdl:part name="fundName" type="s:string" />
+    <wsdl:part name="eaAccountNumber" type="s:string" />
+    <wsdl:part name="registrarAccountNumber" type="s:string" />
+    <wsdl:part name="investorName" type="s:string" />
+    <wsdl:part name="redeemUnit" type="s:string" />
+    <wsdl:part name="pdfImages" type="s:string" />
+    <wsdl:part name="pdfName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionSendPortfolioHttpPostOut">
+    <wsdl:part name="Body" element="tns:RedemptionSendPortfolioResModel" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionPortfolioStatusHttpPostIn">
+    <wsdl:part name="controlId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RedemptionPortfolioStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:RedemptionPortfolioStatusResModel" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionSendPortfolioHttpPostIn">
+    <wsdl:part name="fundCode" type="s:string" />
+    <wsdl:part name="fundName" type="s:string" />
+    <wsdl:part name="eaAccountNumber" type="s:string" />
+    <wsdl:part name="surname" type="s:string" />
+    <wsdl:part name="firstName" type="s:string" />
+    <wsdl:part name="otherName" type="s:string" />
+    <wsdl:part name="controlId" type="s:string" />
+    <wsdl:part name="address1" type="s:string" />
+    <wsdl:part name="address2" type="s:string" />
+    <wsdl:part name="state" type="s:string" />
+    <wsdl:part name="phones" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="dividendMandate" type="s:string" />
+    <wsdl:part name="bankCode" type="s:string" />
+    <wsdl:part name="bankName" type="s:string" />
+    <wsdl:part name="nuban" type="s:string" />
+    <wsdl:part name="numberOfUnits" type="s:string" />
+    <wsdl:part name="pdfImage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionSendPortfolioHttpPostOut">
+    <wsdl:part name="Body" element="tns:SubscriptionSendPortfolioResModel" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionPortfolioStatusHttpPostIn">
+    <wsdl:part name="controlId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionPortfolioStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:SubscriptionPortfolioStatusResModel" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectDebitMandateHttpPostIn">
+    <wsdl:part name="accountNumber" type="s:string" />
+    <wsdl:part name="phoneNumber" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="accountName" type="s:string" />
+    <wsdl:part name="payerName" type="s:string" />
+    <wsdl:part name="payerAddress" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+    <wsdl:part name="productId" type="s:string" />
+    <wsdl:part name="frequency" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="subscriberCode" type="s:string" />
+    <wsdl:part name="bankCode" type="s:string" />
+    <wsdl:part name="fileExtension" type="s:string" />
+    <wsdl:part name="fileBase64Encodedstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateDirectDebitMandateHttpPostOut">
+    <wsdl:part name="Body" element="tns:DirectDebitMandateResModel" />
+  </wsdl:message>
+  <wsdl:message name="PostOCFileHttpPostIn">
+    <wsdl:part name="settlementDate" type="s:string" />
+    <wsdl:part name="units" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="settlementBankAccount" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+    <wsdl:part name="portfolioCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostOCFileHttpPostOut">
+    <wsdl:part name="Body" element="tns:DeluxeOCResModel" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingInterestHttpPostIn">
+    <wsdl:part name="mmfPortfolioCode" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingInterestHttpPostOut">
+    <wsdl:part name="Body" element="tns:DeluxeLiquidatingInterestResModel" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingChargesOnInterestHttpPostIn">
+    <wsdl:part name="mmfPortfolioCode" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PostLiquidatingChargesOnInterestHttpPostOut">
+    <wsdl:part name="Body" element="tns:DeluxeLiquidatingChargesResModel" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDisbursedLoanAndRepaymentHttpPostIn">
+    <wsdl:part name="portfolioCode" type="s:string" />
+    <wsdl:part name="classCode" type="s:string" />
+    <wsdl:part name="productSymbol" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDisbursedLoanAndRepaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:DisbursedLoanResModel" />
+  </wsdl:message>
+  <wsdl:message name="SendCurrentLoanValuationHttpPostIn">
+    <wsdl:part name="portfolioCode" type="s:string" />
+    <wsdl:part name="classCode" type="s:string" />
+    <wsdl:part name="productSymbol" type="s:string" />
+    <wsdl:part name="valueDate" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="bankAccountNo" type="s:string" />
+    <wsdl:part name="narration" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCurrentLoanValuationHttpPostOut">
+    <wsdl:part name="Body" element="tns:DisbursedLoanResModel" />
+  </wsdl:message>
+  <wsdl:message name="SendNomineeClientDividendHttpPostIn">
+    <wsdl:part name="portfolioCode" type="s:string" />
+    <wsdl:part name="securityCode" type="s:string" />
+    <wsdl:part name="currencyCode" type="s:string" />
+    <wsdl:part name="instrumentId" type="s:string" />
+    <wsdl:part name="declaredDate" type="s:string" />
+    <wsdl:part name="paymentDate" type="s:string" />
+    <wsdl:part name="dps" type="s:string" />
+    <wsdl:part name="holdingUnits" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="fxRate" type="s:string" />
+    <wsdl:part name="taxRate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendNomineeClientDividendHttpPostOut">
+    <wsdl:part name="Body" element="tns:NomineeDividendResModel" />
+  </wsdl:message>
+  <wsdl:message name="GetNomineeDividendHttpPostIn">
+    <wsdl:part name="date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetNomineeDividendHttpPostOut">
+    <wsdl:part name="Body" element="tns:NomineeDividend" />
+  </wsdl:message>
+  <wsdl:message name="GetMutualFundDividendPaymentHttpPostIn">
+    <wsdl:part name="date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMutualFundDividendPaymentHttpPostOut">
+    <wsdl:part name="Body" element="tns:DividendPayment" />
+  </wsdl:message>
+  <wsdl:message name="GetPostedRedemptionHttpPostIn">
+    <wsdl:part name="startdate" type="s:string" />
+    <wsdl:part name="enddate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPostedRedemptionHttpPostOut">
+    <wsdl:part name="Body" element="tns:REDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDirectDebitMandateHttpPostIn">
+    <wsdl:part name="mandateCode" type="s:string" />
+    <wsdl:part name="phoneNumber" type="s:string" />
+    <wsdl:part name="payerName" type="s:string" />
+    <wsdl:part name="payerAddress" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="workFlowStatus" type="s:string" />
+    <wsdl:part name="emailAddress" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDirectDebitMandateHttpPostOut">
+    <wsdl:part name="Body" element="tns:UpdateDirectDebitMandateResModel" />
+  </wsdl:message>
+  <wsdl:message name="DirectDebitMandateStatusHttpPostIn">
+    <wsdl:part name="mandateCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DirectDebitMandateStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:DirectDebitMandateStatusResModel" />
+  </wsdl:message>
+  <wsdl:message name="returnbase64ofUriHttpPostIn">
+    <wsdl:part name="uri" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="returnbase64ofUriHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DocUploadHttpPostIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DocUploadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryDocUploadHttpPostIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryDocUploadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryFolderDocUploadHttpPostIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryFolderDocUploadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FundAccountFolderDocUploadHttpPostIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FundAccountFolderDocUploadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryLoanDocUploadHttpPostIn">
+    <wsdl:part name="directUrl" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TreasuryLoanDocUploadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFromSharePointOnlineHttpPostIn">
+    <wsdl:part name="strPath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFromSharePointOnlineHttpPostOut">
+    <wsdl:part name="Body" element="tns:DownloadFromSharePointOnlineResModel" />
+  </wsdl:message>
+  <wsdl:message name="SendRedemptionStatusToDeluxeHttpPostIn">
+    <wsdl:part name="referenceno" type="s:string" />
+    <wsdl:part name="units" type="s:string" />
+    <wsdl:part name="price" type="s:string" />
+    <wsdl:part name="totalunits" type="s:string" />
+    <wsdl:part name="transcharge" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendRedemptionStatusToDeluxeHttpPostOut">
+    <wsdl:part name="Body" element="tns:PostRedemptionStatusResModel" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceNAVSoap">
+    <wsdl:operation name="RedemptionSendPortfolio">
+      <wsdl:input message="tns:RedemptionSendPortfolioSoapIn" />
+      <wsdl:output message="tns:RedemptionSendPortfolioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RedemptionPortfolioStatus">
+      <wsdl:input message="tns:RedemptionPortfolioStatusSoapIn" />
+      <wsdl:output message="tns:RedemptionPortfolioStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionSendPortfolio">
+      <wsdl:input message="tns:SubscriptionSendPortfolioSoapIn" />
+      <wsdl:output message="tns:SubscriptionSendPortfolioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionPortfolioStatus">
+      <wsdl:input message="tns:SubscriptionPortfolioStatusSoapIn" />
+      <wsdl:output message="tns:SubscriptionPortfolioStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectDebitMandate">
+      <wsdl:input message="tns:CreateDirectDebitMandateSoapIn" />
+      <wsdl:output message="tns:CreateDirectDebitMandateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostOCFile">
+      <wsdl:input message="tns:PostOCFileSoapIn" />
+      <wsdl:output message="tns:PostOCFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingInterest">
+      <wsdl:input message="tns:PostLiquidatingInterestSoapIn" />
+      <wsdl:output message="tns:PostLiquidatingInterestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingChargesOnInterest">
+      <wsdl:input message="tns:PostLiquidatingChargesOnInterestSoapIn" />
+      <wsdl:output message="tns:PostLiquidatingChargesOnInterestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDisbursedLoanAndRepayment">
+      <wsdl:input message="tns:ProcessDisbursedLoanAndRepaymentSoapIn" />
+      <wsdl:output message="tns:ProcessDisbursedLoanAndRepaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCurrentLoanValuation">
+      <wsdl:input message="tns:SendCurrentLoanValuationSoapIn" />
+      <wsdl:output message="tns:SendCurrentLoanValuationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNomineeClientDividend">
+      <wsdl:input message="tns:SendNomineeClientDividendSoapIn" />
+      <wsdl:output message="tns:SendNomineeClientDividendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomineeDividend">
+      <wsdl:input message="tns:GetNomineeDividendSoapIn" />
+      <wsdl:output message="tns:GetNomineeDividendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMutualFundDividendPayment">
+      <wsdl:input message="tns:GetMutualFundDividendPaymentSoapIn" />
+      <wsdl:output message="tns:GetMutualFundDividendPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedRedemption">
+      <wsdl:input message="tns:GetPostedRedemptionSoapIn" />
+      <wsdl:output message="tns:GetPostedRedemptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirectDebitMandate">
+      <wsdl:input message="tns:UpdateDirectDebitMandateSoapIn" />
+      <wsdl:output message="tns:UpdateDirectDebitMandateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectDebitMandateStatus">
+      <wsdl:input message="tns:DirectDebitMandateStatusSoapIn" />
+      <wsdl:output message="tns:DirectDebitMandateStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="returnbase64ofUri">
+      <wsdl:input message="tns:returnbase64ofUriSoapIn" />
+      <wsdl:output message="tns:returnbase64ofUriSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocUpload">
+      <wsdl:input message="tns:DocUploadSoapIn" />
+      <wsdl:output message="tns:DocUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryDocUpload">
+      <wsdl:input message="tns:TreasuryDocUploadSoapIn" />
+      <wsdl:output message="tns:TreasuryDocUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryFolderDocUpload">
+      <wsdl:input message="tns:TreasuryFolderDocUploadSoapIn" />
+      <wsdl:output message="tns:TreasuryFolderDocUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FundAccountFolderDocUpload">
+      <wsdl:input message="tns:FundAccountFolderDocUploadSoapIn" />
+      <wsdl:output message="tns:FundAccountFolderDocUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryLoanDocUpload">
+      <wsdl:input message="tns:TreasuryLoanDocUploadSoapIn" />
+      <wsdl:output message="tns:TreasuryLoanDocUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFromSharePointOnline">
+      <wsdl:input message="tns:DownloadFromSharePointOnlineSoapIn" />
+      <wsdl:output message="tns:DownloadFromSharePointOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendRedemptionStatusToDeluxe">
+      <wsdl:input message="tns:SendRedemptionStatusToDeluxeSoapIn" />
+      <wsdl:output message="tns:SendRedemptionStatusToDeluxeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceNAVHttpGet">
+    <wsdl:operation name="RedemptionSendPortfolio">
+      <wsdl:input message="tns:RedemptionSendPortfolioHttpGetIn" />
+      <wsdl:output message="tns:RedemptionSendPortfolioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RedemptionPortfolioStatus">
+      <wsdl:input message="tns:RedemptionPortfolioStatusHttpGetIn" />
+      <wsdl:output message="tns:RedemptionPortfolioStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionSendPortfolio">
+      <wsdl:input message="tns:SubscriptionSendPortfolioHttpGetIn" />
+      <wsdl:output message="tns:SubscriptionSendPortfolioHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionPortfolioStatus">
+      <wsdl:input message="tns:SubscriptionPortfolioStatusHttpGetIn" />
+      <wsdl:output message="tns:SubscriptionPortfolioStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectDebitMandate">
+      <wsdl:input message="tns:CreateDirectDebitMandateHttpGetIn" />
+      <wsdl:output message="tns:CreateDirectDebitMandateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostOCFile">
+      <wsdl:input message="tns:PostOCFileHttpGetIn" />
+      <wsdl:output message="tns:PostOCFileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingInterest">
+      <wsdl:input message="tns:PostLiquidatingInterestHttpGetIn" />
+      <wsdl:output message="tns:PostLiquidatingInterestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingChargesOnInterest">
+      <wsdl:input message="tns:PostLiquidatingChargesOnInterestHttpGetIn" />
+      <wsdl:output message="tns:PostLiquidatingChargesOnInterestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDisbursedLoanAndRepayment">
+      <wsdl:input message="tns:ProcessDisbursedLoanAndRepaymentHttpGetIn" />
+      <wsdl:output message="tns:ProcessDisbursedLoanAndRepaymentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCurrentLoanValuation">
+      <wsdl:input message="tns:SendCurrentLoanValuationHttpGetIn" />
+      <wsdl:output message="tns:SendCurrentLoanValuationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNomineeClientDividend">
+      <wsdl:input message="tns:SendNomineeClientDividendHttpGetIn" />
+      <wsdl:output message="tns:SendNomineeClientDividendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomineeDividend">
+      <wsdl:input message="tns:GetNomineeDividendHttpGetIn" />
+      <wsdl:output message="tns:GetNomineeDividendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMutualFundDividendPayment">
+      <wsdl:input message="tns:GetMutualFundDividendPaymentHttpGetIn" />
+      <wsdl:output message="tns:GetMutualFundDividendPaymentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedRedemption">
+      <wsdl:input message="tns:GetPostedRedemptionHttpGetIn" />
+      <wsdl:output message="tns:GetPostedRedemptionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirectDebitMandate">
+      <wsdl:input message="tns:UpdateDirectDebitMandateHttpGetIn" />
+      <wsdl:output message="tns:UpdateDirectDebitMandateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectDebitMandateStatus">
+      <wsdl:input message="tns:DirectDebitMandateStatusHttpGetIn" />
+      <wsdl:output message="tns:DirectDebitMandateStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="returnbase64ofUri">
+      <wsdl:input message="tns:returnbase64ofUriHttpGetIn" />
+      <wsdl:output message="tns:returnbase64ofUriHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocUpload">
+      <wsdl:input message="tns:DocUploadHttpGetIn" />
+      <wsdl:output message="tns:DocUploadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryDocUpload">
+      <wsdl:input message="tns:TreasuryDocUploadHttpGetIn" />
+      <wsdl:output message="tns:TreasuryDocUploadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryFolderDocUpload">
+      <wsdl:input message="tns:TreasuryFolderDocUploadHttpGetIn" />
+      <wsdl:output message="tns:TreasuryFolderDocUploadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FundAccountFolderDocUpload">
+      <wsdl:input message="tns:FundAccountFolderDocUploadHttpGetIn" />
+      <wsdl:output message="tns:FundAccountFolderDocUploadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryLoanDocUpload">
+      <wsdl:input message="tns:TreasuryLoanDocUploadHttpGetIn" />
+      <wsdl:output message="tns:TreasuryLoanDocUploadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFromSharePointOnline">
+      <wsdl:input message="tns:DownloadFromSharePointOnlineHttpGetIn" />
+      <wsdl:output message="tns:DownloadFromSharePointOnlineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendRedemptionStatusToDeluxe">
+      <wsdl:input message="tns:SendRedemptionStatusToDeluxeHttpGetIn" />
+      <wsdl:output message="tns:SendRedemptionStatusToDeluxeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceNAVHttpPost">
+    <wsdl:operation name="RedemptionSendPortfolio">
+      <wsdl:input message="tns:RedemptionSendPortfolioHttpPostIn" />
+      <wsdl:output message="tns:RedemptionSendPortfolioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RedemptionPortfolioStatus">
+      <wsdl:input message="tns:RedemptionPortfolioStatusHttpPostIn" />
+      <wsdl:output message="tns:RedemptionPortfolioStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionSendPortfolio">
+      <wsdl:input message="tns:SubscriptionSendPortfolioHttpPostIn" />
+      <wsdl:output message="tns:SubscriptionSendPortfolioHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionPortfolioStatus">
+      <wsdl:input message="tns:SubscriptionPortfolioStatusHttpPostIn" />
+      <wsdl:output message="tns:SubscriptionPortfolioStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectDebitMandate">
+      <wsdl:input message="tns:CreateDirectDebitMandateHttpPostIn" />
+      <wsdl:output message="tns:CreateDirectDebitMandateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostOCFile">
+      <wsdl:input message="tns:PostOCFileHttpPostIn" />
+      <wsdl:output message="tns:PostOCFileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingInterest">
+      <wsdl:input message="tns:PostLiquidatingInterestHttpPostIn" />
+      <wsdl:output message="tns:PostLiquidatingInterestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingChargesOnInterest">
+      <wsdl:input message="tns:PostLiquidatingChargesOnInterestHttpPostIn" />
+      <wsdl:output message="tns:PostLiquidatingChargesOnInterestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDisbursedLoanAndRepayment">
+      <wsdl:input message="tns:ProcessDisbursedLoanAndRepaymentHttpPostIn" />
+      <wsdl:output message="tns:ProcessDisbursedLoanAndRepaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCurrentLoanValuation">
+      <wsdl:input message="tns:SendCurrentLoanValuationHttpPostIn" />
+      <wsdl:output message="tns:SendCurrentLoanValuationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNomineeClientDividend">
+      <wsdl:input message="tns:SendNomineeClientDividendHttpPostIn" />
+      <wsdl:output message="tns:SendNomineeClientDividendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNomineeDividend">
+      <wsdl:input message="tns:GetNomineeDividendHttpPostIn" />
+      <wsdl:output message="tns:GetNomineeDividendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMutualFundDividendPayment">
+      <wsdl:input message="tns:GetMutualFundDividendPaymentHttpPostIn" />
+      <wsdl:output message="tns:GetMutualFundDividendPaymentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedRedemption">
+      <wsdl:input message="tns:GetPostedRedemptionHttpPostIn" />
+      <wsdl:output message="tns:GetPostedRedemptionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirectDebitMandate">
+      <wsdl:input message="tns:UpdateDirectDebitMandateHttpPostIn" />
+      <wsdl:output message="tns:UpdateDirectDebitMandateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DirectDebitMandateStatus">
+      <wsdl:input message="tns:DirectDebitMandateStatusHttpPostIn" />
+      <wsdl:output message="tns:DirectDebitMandateStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="returnbase64ofUri">
+      <wsdl:input message="tns:returnbase64ofUriHttpPostIn" />
+      <wsdl:output message="tns:returnbase64ofUriHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocUpload">
+      <wsdl:input message="tns:DocUploadHttpPostIn" />
+      <wsdl:output message="tns:DocUploadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryDocUpload">
+      <wsdl:input message="tns:TreasuryDocUploadHttpPostIn" />
+      <wsdl:output message="tns:TreasuryDocUploadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryFolderDocUpload">
+      <wsdl:input message="tns:TreasuryFolderDocUploadHttpPostIn" />
+      <wsdl:output message="tns:TreasuryFolderDocUploadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FundAccountFolderDocUpload">
+      <wsdl:input message="tns:FundAccountFolderDocUploadHttpPostIn" />
+      <wsdl:output message="tns:FundAccountFolderDocUploadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryLoanDocUpload">
+      <wsdl:input message="tns:TreasuryLoanDocUploadHttpPostIn" />
+      <wsdl:output message="tns:TreasuryLoanDocUploadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFromSharePointOnline">
+      <wsdl:input message="tns:DownloadFromSharePointOnlineHttpPostIn" />
+      <wsdl:output message="tns:DownloadFromSharePointOnlineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendRedemptionStatusToDeluxe">
+      <wsdl:input message="tns:SendRedemptionStatusToDeluxeHttpPostIn" />
+      <wsdl:output message="tns:SendRedemptionStatusToDeluxeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceNAVSoap" type="tns:WebServiceNAVSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RedemptionSendPortfolio">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/RedemptionSendPortfolio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RedemptionPortfolioStatus">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/RedemptionPortfolioStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionSendPortfolio">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/SubscriptionSendPortfolio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionPortfolioStatus">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/SubscriptionPortfolioStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectDebitMandate">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/CreateDirectDebitMandate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostOCFile">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/PostOCFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingInterest">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/PostLiquidatingInterest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingChargesOnInterest">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/PostLiquidatingChargesOnInterest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDisbursedLoanAndRepayment">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/ProcessDisbursedLoanAndRepayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCurrentLoanValuation">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/SendCurrentLoanValuation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNomineeClientDividend">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/SendNomineeClientDividend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomineeDividend">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/GetNomineeDividend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMutualFundDividendPayment">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/GetMutualFundDividendPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedRedemption">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/GetPostedRedemption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirectDebitMandate">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/UpdateDirectDebitMandate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectDebitMandateStatus">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/DirectDebitMandateStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnbase64ofUri">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/returnbase64ofUri" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocUpload">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/DocUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryDocUpload">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/TreasuryDocUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryFolderDocUpload">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/TreasuryFolderDocUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundAccountFolderDocUpload">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/FundAccountFolderDocUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryLoanDocUpload">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/TreasuryLoanDocUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFromSharePointOnline">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/DownloadFromSharePointOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRedemptionStatusToDeluxe">
+      <soap:operation soapAction="http://tempuri.org/arm/ceto/SendRedemptionStatusToDeluxe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceNAVSoap12" type="tns:WebServiceNAVSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RedemptionSendPortfolio">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/RedemptionSendPortfolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RedemptionPortfolioStatus">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/RedemptionPortfolioStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionSendPortfolio">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/SubscriptionSendPortfolio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionPortfolioStatus">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/SubscriptionPortfolioStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectDebitMandate">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/CreateDirectDebitMandate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostOCFile">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/PostOCFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingInterest">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/PostLiquidatingInterest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingChargesOnInterest">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/PostLiquidatingChargesOnInterest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDisbursedLoanAndRepayment">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/ProcessDisbursedLoanAndRepayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCurrentLoanValuation">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/SendCurrentLoanValuation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNomineeClientDividend">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/SendNomineeClientDividend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomineeDividend">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/GetNomineeDividend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMutualFundDividendPayment">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/GetMutualFundDividendPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedRedemption">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/GetPostedRedemption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirectDebitMandate">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/UpdateDirectDebitMandate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectDebitMandateStatus">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/DirectDebitMandateStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnbase64ofUri">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/returnbase64ofUri" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocUpload">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/DocUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryDocUpload">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/TreasuryDocUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryFolderDocUpload">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/TreasuryFolderDocUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundAccountFolderDocUpload">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/FundAccountFolderDocUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryLoanDocUpload">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/TreasuryLoanDocUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFromSharePointOnline">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/DownloadFromSharePointOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRedemptionStatusToDeluxe">
+      <soap12:operation soapAction="http://tempuri.org/arm/ceto/SendRedemptionStatusToDeluxe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceNAVHttpGet" type="tns:WebServiceNAVHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="RedemptionSendPortfolio">
+      <http:operation location="/RedemptionSendPortfolio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RedemptionPortfolioStatus">
+      <http:operation location="/RedemptionPortfolioStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionSendPortfolio">
+      <http:operation location="/SubscriptionSendPortfolio" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionPortfolioStatus">
+      <http:operation location="/SubscriptionPortfolioStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectDebitMandate">
+      <http:operation location="/CreateDirectDebitMandate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostOCFile">
+      <http:operation location="/PostOCFile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingInterest">
+      <http:operation location="/PostLiquidatingInterest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingChargesOnInterest">
+      <http:operation location="/PostLiquidatingChargesOnInterest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDisbursedLoanAndRepayment">
+      <http:operation location="/ProcessDisbursedLoanAndRepayment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCurrentLoanValuation">
+      <http:operation location="/SendCurrentLoanValuation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNomineeClientDividend">
+      <http:operation location="/SendNomineeClientDividend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomineeDividend">
+      <http:operation location="/GetNomineeDividend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMutualFundDividendPayment">
+      <http:operation location="/GetMutualFundDividendPayment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedRedemption">
+      <http:operation location="/GetPostedRedemption" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirectDebitMandate">
+      <http:operation location="/UpdateDirectDebitMandate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectDebitMandateStatus">
+      <http:operation location="/DirectDebitMandateStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnbase64ofUri">
+      <http:operation location="/returnbase64ofUri" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocUpload">
+      <http:operation location="/DocUpload" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryDocUpload">
+      <http:operation location="/TreasuryDocUpload" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryFolderDocUpload">
+      <http:operation location="/TreasuryFolderDocUpload" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundAccountFolderDocUpload">
+      <http:operation location="/FundAccountFolderDocUpload" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryLoanDocUpload">
+      <http:operation location="/TreasuryLoanDocUpload" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFromSharePointOnline">
+      <http:operation location="/DownloadFromSharePointOnline" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRedemptionStatusToDeluxe">
+      <http:operation location="/SendRedemptionStatusToDeluxe" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceNAVHttpPost" type="tns:WebServiceNAVHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="RedemptionSendPortfolio">
+      <http:operation location="/RedemptionSendPortfolio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RedemptionPortfolioStatus">
+      <http:operation location="/RedemptionPortfolioStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionSendPortfolio">
+      <http:operation location="/SubscriptionSendPortfolio" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriptionPortfolioStatus">
+      <http:operation location="/SubscriptionPortfolioStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDirectDebitMandate">
+      <http:operation location="/CreateDirectDebitMandate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostOCFile">
+      <http:operation location="/PostOCFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingInterest">
+      <http:operation location="/PostLiquidatingInterest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostLiquidatingChargesOnInterest">
+      <http:operation location="/PostLiquidatingChargesOnInterest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDisbursedLoanAndRepayment">
+      <http:operation location="/ProcessDisbursedLoanAndRepayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCurrentLoanValuation">
+      <http:operation location="/SendCurrentLoanValuation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNomineeClientDividend">
+      <http:operation location="/SendNomineeClientDividend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNomineeDividend">
+      <http:operation location="/GetNomineeDividend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMutualFundDividendPayment">
+      <http:operation location="/GetMutualFundDividendPayment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostedRedemption">
+      <http:operation location="/GetPostedRedemption" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDirectDebitMandate">
+      <http:operation location="/UpdateDirectDebitMandate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DirectDebitMandateStatus">
+      <http:operation location="/DirectDebitMandateStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="returnbase64ofUri">
+      <http:operation location="/returnbase64ofUri" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocUpload">
+      <http:operation location="/DocUpload" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryDocUpload">
+      <http:operation location="/TreasuryDocUpload" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryFolderDocUpload">
+      <http:operation location="/TreasuryFolderDocUpload" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FundAccountFolderDocUpload">
+      <http:operation location="/FundAccountFolderDocUpload" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TreasuryLoanDocUpload">
+      <http:operation location="/TreasuryLoanDocUpload" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFromSharePointOnline">
+      <http:operation location="/DownloadFromSharePointOnline" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRedemptionStatusToDeluxe">
+      <http:operation location="/SendRedemptionStatusToDeluxe" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceNAV">
+    <wsdl:port name="WebServiceNAVSoap" binding="tns:WebServiceNAVSoap">
+      <soap:address location="http://192.168.250.217/NAVServices/WebServiceNAV.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceNAVSoap12" binding="tns:WebServiceNAVSoap12">
+      <soap12:address location="http://192.168.250.217/NAVServices/WebServiceNAV.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceNAVHttpGet" binding="tns:WebServiceNAVHttpGet">
+      <http:address location="http://192.168.250.217/NAVServices/WebServiceNAV.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceNAVHttpPost" binding="tns:WebServiceNAVHttpPost">
+      <http:address location="http://192.168.250.217/NAVServices/WebServiceNAV.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

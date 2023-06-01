@@ -1,0 +1,15 @@
+C:\Users\hp\source\repos\NQR API\NQR.Common\bin\Debug\net6.0\NQR.Common.deps.json
+C:\Users\hp\source\repos\NQR API\NQR.Common\bin\Debug\net6.0\NQR.Common.dll
+C:\Users\hp\source\repos\NQR API\NQR.Common\bin\Debug\net6.0\ref\NQR.Common.dll
+C:\Users\hp\source\repos\NQR API\NQR.Common\bin\Debug\net6.0\NQR.Common.pdb
+C:\Users\hp\source\repos\NQR API\NQR.Common\bin\Debug\net6.0\NQR.Model.dll
+C:\Users\hp\source\repos\NQR API\NQR.Common\bin\Debug\net6.0\NQR.Model.pdb
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.AssemblyInfo.cs
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.csproj.CopyComplete
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.dll
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\ref\NQR.Common.dll
+C:\Users\hp\source\repos\NQR API\NQR.Common\obj\Debug\net6.0\NQR.Common.pdb

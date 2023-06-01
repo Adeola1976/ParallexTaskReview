@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "969a3b2c-3fd7-44a9-93a0-1406014e5032": {
+      "ProjectGuid": "969a3b2c-3fd7-44a9-93a0-1406014e5032",
+      "DisplayName": "NQR.Model",
+      "ColorIndex": 0
+    },
+    "18c77ac4-fc0e-48a5-bcec-7ebefaf1b2c0": {
+      "ProjectGuid": "18c77ac4-fc0e-48a5-bcec-7ebefaf1b2c0",
+      "DisplayName": "NQR.Common",
+      "ColorIndex": 1
+    },
+    "61105ab0-b1aa-4d73-8e2c-3725ff8583c7": {
+      "ProjectGuid": "61105ab0-b1aa-4d73-8e2c-3725ff8583c7",
+      "DisplayName": "NQR API",
+      "ColorIndex": 2
+    },
+    "c2cece64-0a16-48bf-bcfe-ff01b2d590cb": {
+      "ProjectGuid": "c2cece64-0a16-48bf-bcfe-ff01b2d590cb",
+      "DisplayName": "NQR.Application",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

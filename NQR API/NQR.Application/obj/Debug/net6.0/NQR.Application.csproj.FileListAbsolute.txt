@@ -1,0 +1,17 @@
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\NQR.Application.deps.json
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\NQR.Application.dll
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\ref\NQR.Application.dll
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\NQR.Application.pdb
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.AssemblyInfo.cs
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.dll
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\ref\NQR.Application.dll
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.pdb
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\NQR.Common.dll
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\NQR.Model.dll
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\NQR.Common.pdb
+C:\Users\hp\source\repos\NQR API\NQR.Application\bin\Debug\net6.0\NQR.Model.pdb
+C:\Users\hp\source\repos\NQR API\NQR.Application\obj\Debug\net6.0\NQR.Application.csproj.CopyComplete
